@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "InnerTreeEvaluator",
+    "entityId" : "affcbf6f-c080-431a-87b3-ef6e3c5bf04b",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "affcbf6f-c080-431a-87b3-ef6e3c5bf04b",
+    "tree" : "OTP-Journey",
+    "_type" : {
+      "_id" : "InnerTreeEvaluatorNode",
+      "name" : "Inner Tree Evaluator",
+      "collection" : true
+    }
+  }
+}

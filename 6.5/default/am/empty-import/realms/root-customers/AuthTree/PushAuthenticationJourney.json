@@ -1,0 +1,41 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "AuthTree",
+    "entityId" : "PushAuthenticationJourney",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "PushAuthenticationJourney",
+    "nodes" : {
+      "331ad616-9e6e-411c-9b5d-6d077426d352" : {
+        "displayName" : "Push Sender",
+        "nodeType" : "PushAuthenticationSenderNode",
+        "connections" : {
+          "SENT" : "a31ccfd7-0488-4006-b280-bb384283b72a"
+        }
+      },
+      "a31ccfd7-0488-4006-b280-bb384283b72a" : {
+        "displayName" : "Push Result Verifier Node",
+        "nodeType" : "PushResultVerifierNode",
+        "connections" : {
+          "WAITING" : "02c5b4b3-d0a2-421f-a0be-dcb4bbe131da",
+          "EXPIRED" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "FALSE" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "TRUE" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "02c5b4b3-d0a2-421f-a0be-dcb4bbe131da" : {
+        "displayName" : "Polling Wait Node",
+        "nodeType" : "PollingWaitNode",
+        "connections" : {
+          "DONE" : "a31ccfd7-0488-4006-b280-bb384283b72a",
+          "SPAM" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "EXITED" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "331ad616-9e6e-411c-9b5d-6d077426d352"
+  }
+}

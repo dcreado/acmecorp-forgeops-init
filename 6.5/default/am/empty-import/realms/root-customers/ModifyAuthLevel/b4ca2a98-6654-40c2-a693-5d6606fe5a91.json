@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "ModifyAuthLevel",
+    "entityId" : "b4ca2a98-6654-40c2-a693-5d6606fe5a91",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "b4ca2a98-6654-40c2-a693-5d6606fe5a91",
+    "authLevelIncrement" : 2,
+    "_type" : {
+      "_id" : "ModifyAuthLevelNode",
+      "name" : "Modify Auth Level",
+      "collection" : true
+    }
+  }
+}

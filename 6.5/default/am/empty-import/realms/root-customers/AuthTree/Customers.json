@@ -1,0 +1,58 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "AuthTree",
+    "entityId" : "Customers",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "Customers",
+    "nodes" : {
+      "857e814d-bc92-4706-99ad-d715abaa9ac4" : {
+        "displayName" : "Username Collector",
+        "nodeType" : "UsernameCollectorNode",
+        "connections" : {
+          "outcome" : "aa0a5b8e-daf3-4580-9b6f-3a9080c0d4ac"
+        }
+      },
+      "aa0a5b8e-daf3-4580-9b6f-3a9080c0d4ac" : {
+        "displayName" : "WebAuthn Authentication Node",
+        "nodeType" : "WebAuthnAuthenticationNode",
+        "connections" : {
+          "success" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "failure" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "noDevice" : "7716053b-4413-4acd-9f17-7af6c54f26f0",
+          "error" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "unsupported" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "7716053b-4413-4acd-9f17-7af6c54f26f0" : {
+        "displayName" : "Password Collector",
+        "nodeType" : "PasswordCollectorNode",
+        "connections" : {
+          "outcome" : "bd59efe5-61e3-41cf-96a6-d9a29b616839"
+        }
+      },
+      "bd59efe5-61e3-41cf-96a6-d9a29b616839" : {
+        "displayName" : "Data Store Decision",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "true" : "17bf3ff6-1c5b-4e56-a985-a268aad9adc0",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "17bf3ff6-1c5b-4e56-a985-a268aad9adc0" : {
+        "displayName" : "WebAuthn Registration Node",
+        "nodeType" : "WebAuthnRegistrationNode",
+        "connections" : {
+          "success" : "aa0a5b8e-daf3-4580-9b6f-3a9080c0d4ac",
+          "unsupported" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "failure" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "error" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      }
+    },
+    "entryNodeId" : "857e814d-bc92-4706-99ad-d715abaa9ac4"
+  }
+}

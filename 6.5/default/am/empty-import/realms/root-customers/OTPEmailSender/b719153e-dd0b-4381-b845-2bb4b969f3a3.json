@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "OTPEmailSender",
+    "entityId" : "b719153e-dd0b-4381-b845-2bb4b969f3a3",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "b719153e-dd0b-4381-b845-2bb4b969f3a3",
+    "hostName" : "smtp.mailtrap.io",
+    "password" : null,
+    "sslOption" : "NON_SSL",
+    "hostPort" : 2525,
+    "emailAttribute" : "mail",
+    "fromEmailAddress" : "gatekeep@acmecorp.com",
+    "smsGatewayImplementationClass" : "com.sun.identity.authentication.modules.hotp.DefaultSMSGatewayImpl",
+    "username" : "cf4995fad456d4",
+    "_type" : {
+      "_id" : "OneTimePasswordSmtpSenderNode",
+      "name" : "OTP Email Sender",
+      "collection" : true
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "AuthTree",
+    "entityId" : "OTP-Journey",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "OTP-Journey",
+    "nodes" : {
+      "b719153e-dd0b-4381-b845-2bb4b969f3a3" : {
+        "displayName" : "OTP Email Sender",
+        "nodeType" : "OneTimePasswordSmtpSenderNode",
+        "connections" : {
+          "outcome" : "c3240365-4f48-4645-a308-03a262876011"
+        }
+      },
+      "c3240365-4f48-4645-a308-03a262876011" : {
+        "displayName" : "OTP Collector Decision",
+        "nodeType" : "OneTimePasswordCollectorDecisionNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "ced9c1ca-b7a5-4800-82af-c166ead61edf" : {
+        "displayName" : "HOTP Generator",
+        "nodeType" : "OneTimePasswordGeneratorNode",
+        "connections" : {
+          "outcome" : "b719153e-dd0b-4381-b845-2bb4b969f3a3"
+        }
+      }
+    },
+    "entryNodeId" : "ced9c1ca-b7a5-4800-82af-c166ead61edf"
+  }
+}

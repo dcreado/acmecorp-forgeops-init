@@ -1,0 +1,86 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "AuthTree",
+    "entityId" : "SimplifiedJourney",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "SimplifiedJourney",
+    "nodes" : {
+      "03162f64-b51e-4c85-9cae-4fe37a73a893" : {
+        "displayName" : "Page Node",
+        "nodeType" : "PageNode",
+        "connections" : {
+          "One-Time Password" : "7ebcb88e-f57b-4ed2-983a-9c4ea7d62e7c",
+          "Push Authentication" : "98cd98db-3638-4c03-8c40-437b7ad6750e",
+          "Read-only Authentication" : "b5e91c9c-53a3-40b4-a58c-ba8793d9035e"
+        }
+      },
+      "affcbf6f-c080-431a-87b3-ef6e3c5bf04b" : {
+        "displayName" : "One-Time Password Inner Tree",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a",
+          "true" : "b4ca2a98-6654-40c2-a693-5d6606fe5a91"
+        }
+      },
+      "99cf8f56-10aa-4f86-afe6-ad6d33c2f185" : {
+        "displayName" : "Push Authentication Inner Tree",
+        "nodeType" : "InnerTreeEvaluatorNode",
+        "connections" : {
+          "true" : "b4ca2a98-6654-40c2-a693-5d6606fe5a91",
+          "false" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "b5e91c9c-53a3-40b4-a58c-ba8793d9035e" : {
+        "displayName" : "Data Store Decision",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "true" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+          "false" : "c7a872cb-bedc-4316-8122-62c5d524c5f1"
+        }
+      },
+      "98cd98db-3638-4c03-8c40-437b7ad6750e" : {
+        "displayName" : "Data Store Decision",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "false" : "c7a872cb-bedc-4316-8122-62c5d524c5f1",
+          "true" : "99cf8f56-10aa-4f86-afe6-ad6d33c2f185"
+        }
+      },
+      "7ebcb88e-f57b-4ed2-983a-9c4ea7d62e7c" : {
+        "displayName" : "Data Store Decision",
+        "nodeType" : "DataStoreDecisionNode",
+        "connections" : {
+          "true" : "affcbf6f-c080-431a-87b3-ef6e3c5bf04b",
+          "false" : "c7a872cb-bedc-4316-8122-62c5d524c5f1"
+        }
+      },
+      "4fdebccc-c7da-4099-8219-e85a17827598" : {
+        "displayName" : "Account Lockout",
+        "nodeType" : "AccountLockoutNode",
+        "connections" : {
+          "outcome" : "e301438c-0bd0-429c-ab0c-66126501069a"
+        }
+      },
+      "b4ca2a98-6654-40c2-a693-5d6606fe5a91" : {
+        "displayName" : "Modify Auth Level",
+        "nodeType" : "ModifyAuthLevelNode",
+        "connections" : {
+          "outcome" : "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
+        }
+      },
+      "c7a872cb-bedc-4316-8122-62c5d524c5f1" : {
+        "displayName" : "Retry Limit Decision",
+        "nodeType" : "RetryLimitDecisionNode",
+        "connections" : {
+          "Retry" : "03162f64-b51e-4c85-9cae-4fe37a73a893",
+          "Reject" : "4fdebccc-c7da-4099-8219-e85a17827598"
+        }
+      }
+    },
+    "entryNodeId" : "03162f64-b51e-4c85-9cae-4fe37a73a893"
+  }
+}

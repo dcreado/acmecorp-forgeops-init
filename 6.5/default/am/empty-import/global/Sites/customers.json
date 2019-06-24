@@ -1,0 +1,15 @@
+{
+  "metadata" : {
+    "realm" : null,
+    "amsterVersion" : "6.5.1",
+    "entityType" : "Sites",
+    "entityId" : "customers",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "customers",
+    "id" : "03",
+    "url" : "https://customers.development.acmecorp.com/",
+    "secondaryURLs" : [ ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "InnerTreeEvaluator",
+    "entityId" : "99cf8f56-10aa-4f86-afe6-ad6d33c2f185",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "99cf8f56-10aa-4f86-afe6-ad6d33c2f185",
+    "tree" : "PushAuthenticationJourney",
+    "_type" : {
+      "_id" : "InnerTreeEvaluatorNode",
+      "name" : "Inner Tree Evaluator",
+      "collection" : true
+    }
+  }
+}

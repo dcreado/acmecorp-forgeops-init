@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "WebAuthnAuthenticationNode",
+    "entityId" : "aa0a5b8e-daf3-4580-9b6f-3a9080c0d4ac",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "aa0a5b8e-daf3-4580-9b6f-3a9080c0d4ac",
+    "isRecoveryCodeAllowed" : false,
+    "userVerificationRequirement" : "PREFERRED",
+    "timeout" : 60,
+    "_type" : {
+      "_id" : "WebAuthnAuthenticationNode",
+      "name" : "WebAuthn Authentication Node",
+      "collection" : true
+    }
+  }
+}

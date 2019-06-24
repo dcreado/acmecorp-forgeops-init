@@ -1,0 +1,20 @@
+{
+  "metadata" : {
+    "realm" : "/customers",
+    "amsterVersion" : "6.5.1",
+    "entityType" : "ChoiceCollector",
+    "entityId" : "929f6197-155d-4a8a-af1c-b29b03b4675c",
+    "pathParams" : { }
+  },
+  "data" : {
+    "_id" : "929f6197-155d-4a8a-af1c-b29b03b4675c",
+    "defaultChoice" : "Read-only Authentication",
+    "choices" : [ "One-Time Password", "Push Authentication", "Read-only Authentication" ],
+    "prompt" : "Authentication method",
+    "_type" : {
+      "_id" : "ChoiceCollectorNode",
+      "name" : "Choice Collector",
+      "collection" : true
+    }
+  }
+}
